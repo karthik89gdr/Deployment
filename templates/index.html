@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Remuneration Prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+ <div class="class1">
+	<h1>Predict Remuneration</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	  <input type="text" name="experience" placeholder="Experience" required="required" /><br/>
+        <input type="text" name="Round1" placeholder="Interview Round 1" required="required" /><br/>
+		    <input type="text" name="Round2" placeholder="Interview Round 2" required="required" /><br/><br/>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Remuneration</button>
+    </form>
+
+   <br>
+   <br>
+   {{ remuneration }}
+
+ </div>
+
+
+</body>
+</html>
